@@ -1,17 +1,1 @@
-<div class="modal-header">
-    <div class="reminder-modal__form__cancel">
-        <button type="button" class="close" ng-click="cancel()" aria-label="Close">
-        <span aria-hidden="true">×</span></button>
-    </div>
-    <h3 class="modal-title">{{ title }}</h3>
-</div>
-
-<div class="modal-body">
-    <input type="text" class="form-control ng-pristine ng-valid" placeholder="Name of device..." data-ng-model="deviceName" maxlength="150" required>
-    <div class="alert alert-danger ng-scope ng-binding" data-ng-repeat="error in errors"> {{ error }}</div>
-</div>
-
-<div class="modal-footer">
-    <button class="btn btn-primary" ng-click="add()">Ok</button>
-    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
-</div>
+<div class="modal-header"><div class="reminder-modal__form__cancel"><button type="button" class="close" ng-click="cancel()" aria-label="Close"><span aria-hidden="true">×</span></button></div><h3 class="modal-title">{{ title }}</h3></div><div class="modal-body"><input type="text" class="form-control ng-pristine ng-valid" placeholder="Name of device..." data-ng-model="deviceName" maxlength="150" required><div class="alert alert-danger ng-scope ng-binding" data-ng-repeat="error in errors">{{ error }}</div></div><div class="modal-footer"><button class="btn btn-primary" ng-click="add()">Ok</button> <button class="btn btn-warning" ng-click="cancel()">Cancel</button></div>
