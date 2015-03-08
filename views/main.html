@@ -1,0 +1,30 @@
+<div class="header">
+  <ul class="nav nav-pills pull-right">
+    <li class="active"><a ng-href="">Home</a></li>
+    <li><a ng-href="">About</a></li>
+  </ul>
+  <h3 class="text-muted">Device Manager</h3>
+</div>
+
+<div class="row marketing">
+  
+    <button class="btn btn-success btn-add-device" type="button" data-ng-click="addDevice()">Add Device</button>
+    <ul class="list-group">
+    <p><input type='search' class='form-control' placeholder='Find device...' ng-model='query' /></p>
+
+      <li class="list-group-item" ng-repeat="device in devicesArr | filter: query">
+        <span class="badge"><a href="" class="deleteIcon" data-ng-click="deleteDevice(device)">x</a></span>
+        <a href="" data-ng-click="addDevice(device)">{{ device }}</a>
+      </li>
+
+      <div class="no_devices" ng-show="((devicesArr | filter:query).length==0) && (devicesArr.length)">No matching devices found. Try something else.</div>
+    </ul>
+
+
+    <div class="no_devices" ng-hide="numDevices">
+        You have no devices. Press the Add Device button to add a device.
+    </div>
+</div>
+
+
+
